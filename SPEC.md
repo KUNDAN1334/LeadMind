@@ -2,7 +2,7 @@
  
 > **Portfolio project targeting Artisan AI's AI Engineer (Remote) role**
 > End-to-end autonomous AI sales agent — built entirely on **free/open-source tools**
-> Version 1.0 | Author: [Your Name]
+> Version 1.0 | Author: Kundan Solanki
  
 ---
  

@@ -2,7 +2,7 @@
 
 from fastapi import FastAPI
 from database import engine, Base
-
+from routers.leads import router as leads_router
 # This one line creates all tables in Postgres based on our models
 # It's smart: if a table already exists, it skips it
 Base.metadata.create_all(bind=engine)
@@ -15,6 +15,11 @@ app = FastAPI(
 )
 
 
+# Register the leads router
+# All routes in leads.py are now active under /api/leads/*
+app.include_router(leads_router)
+
+    
 @app.get("/health")
 def health_check():
     return {"status": "ok", "service": "LeadMind API"}
